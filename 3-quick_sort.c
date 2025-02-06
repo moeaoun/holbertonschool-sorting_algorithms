@@ -5,10 +5,10 @@
 static void lomuto_partition(int *array, size_t low, size_t high, size_t size) {
     int temp;
     int pivot = array[high];  /* pivot is always the last element */
-    int i = low - 1;
-    int j;
+    size_t i = low - 1;
+    size_t j;
 
-    for (j = low; j < high; j++) {
+    for (j = low; j < high; j++) {  /* j is now size_t */
         if (array[j] <= pivot) {
             i++;
             temp = array[i];
