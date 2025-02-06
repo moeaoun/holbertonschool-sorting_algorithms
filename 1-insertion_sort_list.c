@@ -37,7 +37,7 @@ void insertion_sort_list(listint_t **list)
             /* Print the list after every swap to see progress */
             print_list(*list);
 
-            temp = current->prev;  // Move temp back for the next swap
+            temp = current->prev;  /* Move temp back for the next swap */
         }
         current = current->next;
     }
