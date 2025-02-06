@@ -8,7 +8,7 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-    listint_t *current, *temp, *swap;
+    listint_t *current, *temp;
 
     if (!list || !(*list) || !(*list)->next)
         return;
@@ -20,7 +20,6 @@ void insertion_sort_list(listint_t **list)
         while (temp && current->n < temp->n)
         {
             /* Swap nodes */
-            swap = current->next;
             if (current->next)
                 current->next->prev = temp;
             if (temp->prev)
@@ -35,11 +34,10 @@ void insertion_sort_list(listint_t **list)
             if (!current->prev)
                 *list = current;
 
-            // Print the list after every swap to see progress
+            /* Print the list after every swap to see progress */
             print_list(*list);
 
-            // Move temp back for the next swap
-            temp = current->prev;
+            temp = current->prev;  // Move temp back for the next swap
         }
         current = current->next;
     }
