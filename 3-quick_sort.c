@@ -25,8 +25,17 @@ static void lomuto_partition(int *array, size_t low, size_t high, size_t size) {
     print_array(array, size);  /* Print the array after pivot swap */
 }
 
-/* Main quick_sort function */
-void quick_sort(int *array, size_t size) {
+/**
+ * quick_sort - Sorts an array of integers using the Quick Sort algorithm
+ * @array: The array to be sorted
+ * @size: The size of the array
+ *
+ * Description: This function sorts an array of integers in ascending order
+ *              using the Quick Sort algorithm.
+ */
+
+void quick_sort(int *array, size_t size)
+{
     if (array == NULL || size < 2)
         return;
 
