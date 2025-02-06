@@ -34,7 +34,7 @@ void selection_sort(int *array, size_t size)
             array[min_idx] = temp;
 
             /* Print the array after every swap to see progress */
-            print_array(array, size);
+            print_array(array, size);  // Ensure print_array is declared in sort.h
         }
     }
 }
